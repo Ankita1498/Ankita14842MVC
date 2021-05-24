@@ -1,0 +1,38 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "PersonForm";
+}
+
+
+<h1>PersonForm</h1>
+
+<form asp-controller="Assignment" asp-action="DisplayPersonData" method="post">
+    <div asp-validation-summary="All" class="text text-danger"></div>
+
+    Name : <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name"></span>
+    <br />
+
+    Email : <input asp-for="Email " class="form-control" />
+    <span asp-validation-for="Email"></span>
+    <br />
+
+    Phone :<input asp-for="Phone" class="form-control" />
+    <span asp-validation-for="Phone"></span>
+    <br />
+
+    <div>
+    WillAttend
+    <span asp-validation-for="WillAttend"></span>
+   
+            <span asp-validation-for="WillAttend"></span>
+            <select asp-for="WillAttend" class="form-control" aria-labelledby="btnDropdownDemo">
+                <option selected disabled>---Confirmation---</option>
+                <option class="dropdown-item" value="Yes">Yes, I can attend</option>
+                <option class="dropdown-item" value="No">No, I can't attend</option>
+            </select>
+        </div>
+            <br/>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+
