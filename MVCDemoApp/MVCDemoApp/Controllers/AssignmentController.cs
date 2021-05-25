@@ -20,7 +20,7 @@ namespace MVCDemoApp.Controllers
 
         public IActionResult DisplayPersonData(Person person)
         {
-            ViewBag.DefaultMessage = "Thank You " + person.Name;
+            ViewBag.Default = "Thank You " + person.Name;
             if (person.WillAttend == "Yes")
             {
                 ViewBag.Message = "Thank you for coming  ";
